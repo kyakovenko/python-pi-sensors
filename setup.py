@@ -1,10 +1,10 @@
 from distutils.core import setup, Extension
 
-cpp_module = Extension('dht11', 
+cpp_module = Extension('dht', 
                        libraries = ['wiringPi'],
-                       sources=['dht11.c'],
+                       sources=['dht.c'],
                       )
 
 
-setup(name='dht11', version='0.1',  \
+setup(name='pisensors', version='0.1',  \
       ext_modules=[cpp_module])

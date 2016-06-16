@@ -96,14 +96,14 @@ static PyObject * wiringPiSetupWrapper(PyObject * self, PyObject * args) {
 ">>> wiringPiSetup() \n" \
 ">>> read_dht11(pin = 7) \n"
 
-static PyMethodDef DHT11Methods[] = {
+static PyMethodDef DHTMethods[] = {
 	{ "wiringPiSetup", wiringPiSetupWrapper, METH_NOARGS, "test"},
 	{ "read_dht11", read_dht11, METH_VARARGS | METH_KEYWORDS, READ_DHT11_DESCRIPTION },
  	{ NULL, NULL, 0, NULL }
 };
 
-DL_EXPORT(void) initdht11(void)
+DL_EXPORT(void) initdht(void)
 {
-  Py_InitModule("dht11", DHT11Methods);
+  Py_InitModule("dht", DHTMethods);
 }
 
